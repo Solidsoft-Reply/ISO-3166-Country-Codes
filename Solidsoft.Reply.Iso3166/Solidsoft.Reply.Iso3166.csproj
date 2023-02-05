@@ -16,7 +16,7 @@
     <PackageReadmeFile>SolidsoftReplyIso3166.md</PackageReadmeFile>
     <PackageTags>country;iso3166</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-	<Version>1.1.1</Version>
+	<Version>1.1.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
