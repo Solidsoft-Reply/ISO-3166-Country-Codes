@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Support for ISO 3166-2 country codes</Title>
+    <Copyright>©2023 Solidsoft Reply</Copyright>
+    <Description>A helper library for resolving alpha-2, alpha-3 and numeric country codes to country records.</Description>
+    <Company>Solidsoft Reply Ltd.</Company>
+    <Authors>cnayoung</Authors>
+  </PropertyGroup>
+
+</Project>
