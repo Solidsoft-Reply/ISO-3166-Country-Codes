@@ -10,6 +10,24 @@
     <Description>A helper library for resolving alpha-2, alpha-3 and numeric country codes to country records.</Description>
     <Company>Solidsoft Reply Ltd.</Company>
     <Authors>cnayoung</Authors>
+    <RepositoryUrl>https://github.com/Solidsoft-Reply/Iso3166</RepositoryUrl>
+    <PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
+    <PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
+    <PackageReadmeFile>SolidsoftReplyIso3166.md</PackageReadmeFile>
+    <PackageTags>country;iso3166</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+	<Version>1.1.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\SolidsoftReplyIso3166.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\..\OneDrive - London Living\Mega\Logos\Solidsoft Reply - LOGO Square_small.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
