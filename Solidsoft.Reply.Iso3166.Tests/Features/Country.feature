@@ -1,5 +1,11 @@
 ﻿Feature: Calculator
 
+The data in the examples table is taken directly from the ISO 3166-1 standard.  See
+https://www.iso.org/obp/ui/#search for the published list of codes.  These can be 
+copied manually into a spreadsheet and then used to generate the example table and
+code to ensure correctness.  NB., there is a pay-for service to provide this data 
+in machine-readable formats and to notify users of changes.
+
 Scenario Outline: Country
 	Given the Alpha-2 country code is <alpha-2code>
 	When I retrieve the country using the Alpha-2 country code
@@ -316,3 +322,15 @@ Scenario Outline: Country
 	| Yemen                                                      | Yémen (le)                                               | YE          | YEM         | 887     |
 	| Zambia                                                     | Zambie (la)                                              | ZM          | ZMB         | 894     |
 	| Zimbabwe                                                   | Zimbabwe (le)                                            | ZW          | ZWE         | 716     |
+
+Scenario Outline: CountryNumber
+	Given the dictionary is <dictionaryname>
+	Then the expected number of entries is <expectedentrycount>
+
+	Examples:
+	| dictionaryname | expectedentrycount |
+	| EnglishNames   | 249                |
+	| FrenchNames    | 249                |
+	| Alpha2Codes    | 249                |
+	| Alpha3Codes    | 249                |
+	| NumericCodes   | 249                |

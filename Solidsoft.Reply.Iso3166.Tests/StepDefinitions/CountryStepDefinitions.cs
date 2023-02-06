@@ -1,5 +1,7 @@
 using Solidsoft.Reply.Iso3166;
 
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Solidsoft.Reply.Iso3166Country.Tests.StepDefinitions;
 
 [Binding]
@@ -10,8 +12,8 @@ public sealed class CountryStepDefinitions {
     private string _alpha2Code = string.Empty;
     private string _alpha3Code = string.Empty;
     private string _numericCode = string.Empty;
-
     private ICountry _country = new NoCountry();
+    private IReadOnlyDictionary<string, ICountry> _selectedDictionary;
 
     // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
@@ -112,6 +114,24 @@ public sealed class CountryStepDefinitions {
     [Then("the numeric code should be (.*)")]
     public void ThenTheNumericCodeShouldBe(string numericCode) {
         _country.Numeric.Should().Be(numericCode);
+    }
+
+    [Given("the dictionary is (.*)")]
+    public void ThenTheDictionaryIs(string dictionaryName) {
+        _selectedDictionary = dictionaryName switch
+        {
+            "EnglishNames" => Country.EnglishNames,
+            "FrenchNames" => Country.FrenchNames,
+            "Alpha2Codes" => Country.Alpha2Codes,
+            "Alpha3Codes" => Country.Alpha3Codes,
+            "NumericCodes" => Country.NumericCodes,
+            _ => throw new ArgumentOutOfRangeException(nameof(dictionaryName), dictionaryName, null)
+        };
+    }
+
+    [Then("the expected number of entries is (.*)")]
+    public void ThenTheExpectedNumberOfEntriesIs(int expectedCount) {
+        _selectedDictionary.Count.Should().Be(expectedCount);
     }
 }
 

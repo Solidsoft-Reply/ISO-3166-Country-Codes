@@ -35,7 +35,11 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", @"The data in the examples table is taken directly from the ISO 3166-1 standard.  See
+https://www.iso.org/obp/ui/#search for the published list of codes.  These can be 
+copied manually into a spreadsheet and then used to generate the example table and
+code to ensure correctness.  NB., there is a pay-for service to provide this data 
+in machine-readable formats and to notify users of changes.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -334,7 +338,7 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
             argumentsOfScenario.Add("alpha-3code", alpha_3Code);
             argumentsOfScenario.Add("numeric", numeric);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 3
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -354,173 +358,217 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 10
  testRunner.Given(string.Format("the Alpha-2 country code is {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 5
+#line 11
  testRunner.When("I retrieve the country using the Alpha-2 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 7
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 8
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 9
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 12
- testRunner.Given(string.Format("the Alpha-3 country code is {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 13
- testRunner.When("I retrieve the country using the Alpha-3 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
- testRunner.Given(string.Format("the numeric country code is {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 21
- testRunner.When("I retrieve the country using the numeric country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 22
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 23
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 24
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 25
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
- testRunner.Given(string.Format("the country name in English is {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 29
- testRunner.When("I retrieve the country record from the dictionary using the English country name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 30
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 31
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 32
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 33
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 34
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 36
- testRunner.Given(string.Format("the country name in French is {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 37
- testRunner.When("I retrieve the country record from the dictionary using the French country name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 38
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 39
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 40
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 41
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 42
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 44
- testRunner.Given(string.Format("the Alpha-2 country code is {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 45
- testRunner.When("I retrieve the country record from the dictionary using the Alpha-2 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 46
- testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 47
-     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 48
-  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 49
-  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 50
-  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 52
  testRunner.Given(string.Format("the Alpha-3 country code is {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 53
- testRunner.When("I retrieve the country record from the dictionary using the Alpha-3 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+ testRunner.When("I retrieve the country using the Alpha-3 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 20
  testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 21
      testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 22
   testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 23
   testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 58
+#line 24
   testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 60
+#line 26
  testRunner.Given(string.Format("the numeric country code is {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 61
- testRunner.When("I retrieve the country record from the dictionary using the numeric country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.When("I retrieve the country using the numeric country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 28
  testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 63
+#line 29
      testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 30
   testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 31
   testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 32
   testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 34
+ testRunner.Given(string.Format("the country name in English is {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 35
+ testRunner.When("I retrieve the country record from the dictionary using the English country name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 36
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 39
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
+ testRunner.Given(string.Format("the country name in French is {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 43
+ testRunner.When("I retrieve the country record from the dictionary using the French country name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 44
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 45
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 46
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 48
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 50
+ testRunner.Given(string.Format("the Alpha-2 country code is {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 51
+ testRunner.When("I retrieve the country record from the dictionary using the Alpha-2 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 52
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 53
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 54
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 55
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 56
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 58
+ testRunner.Given(string.Format("the Alpha-3 country code is {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 59
+ testRunner.When("I retrieve the country record from the dictionary using the Alpha-3 country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 60
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 61
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 62
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 63
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 64
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 66
+ testRunner.Given(string.Format("the numeric country code is {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 67
+ testRunner.When("I retrieve the country record from the dictionary using the numeric country code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 68
+ testRunner.Then(string.Format("the English short name should be {0}", englishshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 69
+     testRunner.And(string.Format("the French short name should be {0}", frenchshortname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 70
+  testRunner.And(string.Format("the Alpha-2 code should be {0}", alpha_2Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 71
+  testRunner.And(string.Format("the Alpha-3 code should be {0}", alpha_3Code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 72
+  testRunner.And(string.Format("the numeric code should be {0}", numeric), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("CountryNumber")]
+        [NUnit.Framework.TestCaseAttribute("EnglishNames", "249", null)]
+        [NUnit.Framework.TestCaseAttribute("FrenchNames", "249", null)]
+        [NUnit.Framework.TestCaseAttribute("Alpha2Codes", "249", null)]
+        [NUnit.Framework.TestCaseAttribute("Alpha3Codes", "249", null)]
+        [NUnit.Framework.TestCaseAttribute("NumericCodes", "249", null)]
+        public virtual void CountryNumber(string dictionaryname, string expectedentrycount, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("dictionaryname", dictionaryname);
+            argumentsOfScenario.Add("expectedentrycount", expectedentrycount);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CountryNumber", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 326
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 327
+ testRunner.Given(string.Format("the dictionary is {0}", dictionaryname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 328
+ testRunner.Then(string.Format("the expected number of entries is {0}", expectedentrycount), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
