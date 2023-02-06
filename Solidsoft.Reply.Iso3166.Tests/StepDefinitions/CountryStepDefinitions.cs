@@ -5,6 +5,8 @@ namespace Solidsoft.Reply.Iso3166Country.Tests.StepDefinitions;
 [Binding]
 public sealed class CountryStepDefinitions {
 
+    private string _englishShortName = string.Empty;
+    private string _frenchShortName = string.Empty;
     private string _alpha2Code = string.Empty;
     private string _alpha3Code = string.Empty;
     private string _numericCode = string.Empty;
@@ -30,6 +32,16 @@ public sealed class CountryStepDefinitions {
         _numericCode = numericCode;
     }
 
+    [Given("the country name in English is (.*)")]
+    public void GivenTheCountryNameInEnglishIs(string englishShortName) {
+        _englishShortName = englishShortName;
+    }
+
+    [Given("the country name in French is (.*)")]
+    public void GivenTheCountryNameInFrenchIs(string frenchShortName) {
+        _frenchShortName = frenchShortName;
+    }
+
     [When("I retrieve the country using the Alpha-2 country code")]
     public void WhenIRetrieveTheCountryUsingTheAlpha2CountryCode()
     {
@@ -44,6 +56,34 @@ public sealed class CountryStepDefinitions {
     [When("I retrieve the country using the numeric country code")]
     public void WhenIRetrieveTheCountryUsingTheNumericCountryCode() {
         _country = Country.GetCountryByNumericCode(_numericCode);
+    }
+
+    [When("I retrieve the country record from the dictionary using the English country name")]
+    public void WhenIRetrieveTheCountryRecordFromTheDictionaryUsingTheEnglishCountryName() {
+        _country = Country.EnglishNames[_englishShortName];
+    }
+
+    [When("I retrieve the country record from the dictionary using the French country name")]
+    public void WhenIRetrieveTheCountryRecordFromTheDictionaryUsingTheFrenchCountryName() {
+        _country = Country.FrenchNames[_frenchShortName];
+    }
+
+
+    [When("I retrieve the country record from the dictionary using the Alpha-2 country code")]
+    public void WhenIRetrieveTheCountryRecordFromTheDictionaryUsingTheAlpha2CountryCode() {
+        _country = Country.Alpha2Codes[_alpha2Code];
+    }
+
+
+    [When("I retrieve the country record from the dictionary using the Alpha-3 country code")]
+    public void WhenIRetrieveTheCountryRecordFromTheDictionaryUsingTheAlpha3CountryCode() {
+        _country = Country.Alpha3Codes[_alpha3Code];
+    }
+
+
+    [When("I retrieve the country record from the dictionary using the numeric country code")]
+    public void WhenIRetrieveTheCountryRecordFromTheDictionaryUsingTheNumericCountryCode() {
+        _country = Country.NumericCodes[_numericCode];
     }
 
     [Then("the English short name should be (.*)")]

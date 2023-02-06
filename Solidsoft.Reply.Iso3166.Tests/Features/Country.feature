@@ -25,6 +25,46 @@ Scenario Outline: Country
 		And the Alpha-3 code should be <alpha-3code>
 		And the numeric code should be <numeric>
 
+	Given the country name in English is <englishshortname>
+	When I retrieve the country record from the dictionary using the English country name
+	Then the English short name should be <englishshortname>
+	    And the French short name should be <frenchshortname>
+		And the Alpha-2 code should be <alpha-2code>
+		And the Alpha-3 code should be <alpha-3code>
+		And the numeric code should be <numeric>
+
+	Given the country name in French is <frenchshortname>
+	When I retrieve the country record from the dictionary using the French country name
+	Then the English short name should be <englishshortname>
+	    And the French short name should be <frenchshortname>
+		And the Alpha-2 code should be <alpha-2code>
+		And the Alpha-3 code should be <alpha-3code>
+		And the numeric code should be <numeric> 
+
+	Given the Alpha-2 country code is <alpha-2code>
+	When I retrieve the country record from the dictionary using the Alpha-2 country code
+	Then the English short name should be <englishshortname>
+	    And the French short name should be <frenchshortname>
+		And the Alpha-2 code should be <alpha-2code>
+		And the Alpha-3 code should be <alpha-3code>
+		And the numeric code should be <numeric> 
+
+	Given the Alpha-3 country code is <alpha-3code>
+	When I retrieve the country record from the dictionary using the Alpha-3 country code
+	Then the English short name should be <englishshortname>
+	    And the French short name should be <frenchshortname>
+		And the Alpha-2 code should be <alpha-2code>
+		And the Alpha-3 code should be <alpha-3code>
+		And the numeric code should be <numeric> 
+
+	Given the numeric country code is <numeric>
+	When I retrieve the country record from the dictionary using the numeric country code
+	Then the English short name should be <englishshortname>
+	    And the French short name should be <frenchshortname>
+		And the Alpha-2 code should be <alpha-2code>
+		And the Alpha-3 code should be <alpha-3code>
+		And the numeric code should be <numeric> 
+
     Examples:
 	| englishshortname                                           | frenchshortname                                          | alpha-2code | alpha-3code | numeric |
 	| Afghanistan                                                | Afghanistan (l')                                         | AF          | AFG         | 004     |
