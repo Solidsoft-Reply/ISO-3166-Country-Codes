@@ -1,7 +1,5 @@
 using Solidsoft.Reply.Iso3166;
 
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace Solidsoft.Reply.Iso3166Country.Tests.StepDefinitions;
 
 [Binding]

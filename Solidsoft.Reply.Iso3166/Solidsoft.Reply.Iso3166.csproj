@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
+	<LangVersion>11.0</LangVersion>
+	<ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Support for ISO 3166-2 country codes</Title>
@@ -16,7 +17,7 @@
     <PackageReadmeFile>SolidsoftReplyIso3166.md</PackageReadmeFile>
     <PackageTags>country;iso3166</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-	<Version>1.1.2</Version>
+	<Version>1.1.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -20,8 +20,8 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Calculator")]
-    public partial class CalculatorFeature
+    [NUnit.Framework.DescriptionAttribute("Country")]
+    public partial class CountryFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", @"The data in the examples table is taken directly from the ISO 3166-1 standard.  See
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Country", @"The data in the examples table is taken directly from the ISO 3166-1 standard.  See
 https://www.iso.org/obp/ui/#search for the published list of codes.  These can be 
 copied manually into a spreadsheet and then used to generate the example table and
 code to ensure correctness.  NB., there is a pay-for service to provide this data 
@@ -531,19 +531,19 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("CountryNumber")]
+        [NUnit.Framework.DescriptionAttribute("CountryCount")]
         [NUnit.Framework.TestCaseAttribute("EnglishNames", "249", null)]
         [NUnit.Framework.TestCaseAttribute("FrenchNames", "249", null)]
         [NUnit.Framework.TestCaseAttribute("Alpha2Codes", "249", null)]
         [NUnit.Framework.TestCaseAttribute("Alpha3Codes", "249", null)]
         [NUnit.Framework.TestCaseAttribute("NumericCodes", "249", null)]
-        public virtual void CountryNumber(string dictionaryname, string expectedentrycount, string[] exampleTags)
+        public virtual void CountryCount(string dictionaryname, string expectedcount, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("dictionaryname", dictionaryname);
-            argumentsOfScenario.Add("expectedentrycount", expectedentrycount);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CountryNumber", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            argumentsOfScenario.Add("expectedcount", expectedcount);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CountryCount", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 326
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -568,7 +568,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("the dictionary is {0}", dictionaryname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 328
- testRunner.Then(string.Format("the expected number of entries is {0}", expectedentrycount), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the expected number of entries is {0}", expectedcount), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

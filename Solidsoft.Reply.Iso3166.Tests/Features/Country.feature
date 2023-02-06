@@ -1,4 +1,4 @@
-﻿Feature: Calculator
+﻿Feature: Country
 
 The data in the examples table is taken directly from the ISO 3166-1 standard.  See
 https://www.iso.org/obp/ui/#search for the published list of codes.  These can be 
@@ -323,14 +323,14 @@ Scenario Outline: Country
 	| Zambia                                                     | Zambie (la)                                              | ZM          | ZMB         | 894     |
 	| Zimbabwe                                                   | Zimbabwe (le)                                            | ZW          | ZWE         | 716     |
 
-Scenario Outline: CountryNumber
+Scenario Outline: CountryCount
 	Given the dictionary is <dictionaryname>
-	Then the expected number of entries is <expectedentrycount>
+	Then the expected number of entries is <expectedcount>
 
 	Examples:
-	| dictionaryname | expectedentrycount |
-	| EnglishNames   | 249                |
-	| FrenchNames    | 249                |
-	| Alpha2Codes    | 249                |
-	| Alpha3Codes    | 249                |
-	| NumericCodes   | 249                |
+	| dictionaryname | expectedcount |
+	| EnglishNames   | 249           |
+	| FrenchNames    | 249           |
+	| Alpha2Codes    | 249           |
+	| Alpha3Codes    | 249           |
+	| NumericCodes   | 249           |
