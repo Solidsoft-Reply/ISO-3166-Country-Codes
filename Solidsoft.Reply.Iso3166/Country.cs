@@ -16,7 +16,7 @@
 namespace Solidsoft.Reply.Iso3166;
 
 public static class Country {
-    public static IDictionary<string, ICountry> EnglishNames = new Dictionary<string, ICountry>()
+    public static IReadOnlyDictionary<string, ICountry> EnglishNames = new Dictionary<string, ICountry>()
     {
         { "Afghanistan", new Afghanistan() },
         { "Albania", new Albania() },
@@ -269,7 +269,7 @@ public static class Country {
         { "Zimbabwe", new Zimbabwe() }
     };
 
-    public static IDictionary<string, ICountry> FrenchNames = new Dictionary<string, ICountry>() {
+    public static IReadOnlyDictionary<string, ICountry> FrenchNames = new Dictionary<string, ICountry>() {
         { "Afghanistan (l')", new Afghanistan() },
         { "Albanie (l')", new Albania() },
         { "Algérie (l')", new Algeria() },
@@ -521,7 +521,7 @@ public static class Country {
         { "Zimbabwe (le)", new Zimbabwe() }
     };
 
-    public static IDictionary<string, ICountry> Alpha2Codes = new Dictionary<string, ICountry>()
+    public static IReadOnlyDictionary<string, ICountry> Alpha2Codes = new Dictionary<string, ICountry>()
     {
         { "AF", new Afghanistan() },
         { "AL", new Albania() },
@@ -774,7 +774,7 @@ public static class Country {
         { "ZW", new Zimbabwe() }
     };
 
-    public static IDictionary<string, ICountry> Alpha3Codes = new Dictionary<string, ICountry>
+    public static IReadOnlyDictionary<string, ICountry> Alpha3Codes = new Dictionary<string, ICountry>
     {
         { "AFG", new Afghanistan() },
         { "ALB", new Albania() },
@@ -1027,7 +1027,7 @@ public static class Country {
         { "ZWE", new Zimbabwe() }
     };
 
-    public static IDictionary<string, ICountry> NumericCodes = new Dictionary<string, ICountry>()
+    public static IReadOnlyDictionary<string, ICountry> NumericCodes = new Dictionary<string, ICountry>()
     {
         { "004", new Afghanistan() },
         { "008", new Albania() },
