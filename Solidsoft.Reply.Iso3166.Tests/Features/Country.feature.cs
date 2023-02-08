@@ -26,7 +26,7 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = ((string[])(null));
+        private static string[] featureTags = ((string[])(null));
         
 #line 1 "Country.feature"
 #line hidden
@@ -39,7 +39,7 @@ namespace Solidsoft.Reply.Iso3166.Tests.Features
 https://www.iso.org/obp/ui/#search for the published list of codes.  These can be 
 copied manually into a spreadsheet and then used to generate the example table and
 code to ensure correctness.  NB., there is a pay-for service to provide this data 
-in machine-readable formats and to notify users of changes.", ProgrammingLanguage.CSharp, ((string[])(null)));
+in machine-readable formats and to notify users of changes.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -51,28 +51,28 @@ in machine-readable formats and to notify users of changes.", ProgrammingLanguag
         }
         
         [NUnit.Framework.SetUpAttribute()]
-        public virtual void TestInitialize()
+        public void TestInitialize()
         {
         }
         
         [NUnit.Framework.TearDownAttribute()]
-        public virtual void TestTearDown()
+        public void TestTearDown()
         {
             testRunner.OnScenarioEnd();
         }
         
-        public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
+        public void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
             testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<NUnit.Framework.TestContext>(NUnit.Framework.TestContext.CurrentContext);
         }
         
-        public virtual void ScenarioStart()
+        public void ScenarioStart()
         {
             testRunner.OnScenarioStart();
         }
         
-        public virtual void ScenarioCleanup()
+        public void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
         }
@@ -328,7 +328,7 @@ in machine-readable formats and to notify users of changes.", ProgrammingLanguag
         [NUnit.Framework.TestCaseAttribute("Yemen", "Yémen (le)", "YE", "YEM", "887", null)]
         [NUnit.Framework.TestCaseAttribute("Zambia", "Zambie (la)", "ZM", "ZMB", "894", null)]
         [NUnit.Framework.TestCaseAttribute("Zimbabwe", "Zimbabwe (le)", "ZW", "ZWE", "716", null)]
-        public virtual void Country(string englishshortname, string frenchshortname, string alpha_2Code, string alpha_3Code, string numeric, string[] exampleTags)
+        public void Country(string englishshortname, string frenchshortname, string alpha_2Code, string alpha_3Code, string numeric, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -337,21 +337,11 @@ in machine-readable formats and to notify users of changes.", ProgrammingLanguag
             argumentsOfScenario.Add("alpha-2code", alpha_2Code);
             argumentsOfScenario.Add("alpha-3code", alpha_3Code);
             argumentsOfScenario.Add("numeric", numeric);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Country", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
                 testRunner.SkipScenario();
             }
@@ -537,27 +527,17 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("Alpha2Codes", "249", null)]
         [NUnit.Framework.TestCaseAttribute("Alpha3Codes", "249", null)]
         [NUnit.Framework.TestCaseAttribute("NumericCodes", "249", null)]
-        public virtual void CountryCount(string dictionaryname, string expectedcount, string[] exampleTags)
+        public void CountryCount(string dictionaryname, string expectedcount, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("dictionaryname", dictionaryname);
             argumentsOfScenario.Add("expectedcount", expectedcount);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CountryCount", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CountryCount", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 326
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
                 testRunner.SkipScenario();
             }
